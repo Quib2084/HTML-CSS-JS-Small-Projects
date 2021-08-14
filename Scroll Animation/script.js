@@ -5,7 +5,7 @@ window.addEventListener('scroll', update)
 update();
 
 function update() {
-    const limit = window.innerHeight * 4 / 5
+    const limit = window.innerHeight * 3 / 5
     boxes.forEach((box) => {
         if (box.getBoundingClientRect().top < limit) {
             box.classList.add('show')
