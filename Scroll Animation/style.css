@@ -4,32 +4,38 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow: auto;
+}
+
+
 body{
     font-family: 'verdana', sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: none;
     background-color: rgb(255, 197, 173);
 
 }
 
+.container{
+    width: 50vw;
+}
 
 .box{
     background-color: tomato;
     color:white;
-    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
     border-radius: 25px;
     box-shadow: 2px 5px 5px maroon;
-    transform: translateX(800%);
-    transition: transform 0.6s ease;
+    transform: translateX(-700%);
+    transition: transform 0.7s ease;
 }
 
 h1{
@@ -45,7 +51,7 @@ h1{
         background-color: white;
         color:tomato;
         transform: rotatez(-10deg) scale(1.1);
-        z-index: 1;
+        z-index: 1000;
         
 }
 
@@ -59,7 +65,7 @@ h1{
 }
 
 .box:nth-of-type(odd){
-    transform: translateX(-800%);
+    transform: translateX(-700%);
 }
 
 
@@ -67,12 +73,4 @@ h1{
     transform: translateX(0);
     transform: rotatez(10deg);
     
-}
-
-@media (max-width:350px){
-body{
-   max-width:90vw;
-   }
-
-
 }
